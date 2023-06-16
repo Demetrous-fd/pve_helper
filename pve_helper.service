@@ -1,0 +1,11 @@
+[Unit]
+Description=Bot: Pve helper for VK group
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/var/opt/pve_helper/venv/bin/activate && python main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
