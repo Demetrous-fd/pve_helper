@@ -1,0 +1,9 @@
+{
+  "ostemplate": "local:vztmpl/ubuntu-22.04-nginx-docker.tar.gz",
+  "memory": 1024,
+  "cores": 1,
+  "net0": "name=eth0,bridge=vmbr2,firewall=1,ip=dhcp",
+  "rootfs": "local-zfs:25",
+  "unprivileged": 1,
+  "features": "nesting=1"
+}
