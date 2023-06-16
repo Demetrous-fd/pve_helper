@@ -4,7 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/var/opt/pve_helper/venv/bin/activate && python main.py
+User=root
+Group=root
+WorkingDirectory=/var/opt/pve_helper
+Environment=PYTHONPATH=/var/opt/pve_helper/venv/bin:$PATH
+ExecStart=/var/opt/pve_helper/venv/bin/python main.py
 Restart=always
 
 [Install]
